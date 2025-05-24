@@ -1,7 +1,8 @@
 {
-    "name": "UniTask.Editor",
+    "name": "UnityEssentials.Tasks.Editor",
+    "rootNamespace": "",
     "references": [
-        "UniTask"
+        "UnityEssentials.Tasks"
     ],
     "includePlatforms": [
         "Editor"

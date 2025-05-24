@@ -323,7 +323,7 @@ namespace UnityEssentials.Threading.Tasks
         Task<T> OnSubmitAsync();
     }
 
-    internal class TextSelectionEventConverter : UnityEvent<(string, int, int)>, IDisposable
+    public class TextSelectionEventConverter : UnityEvent<(string, int, int)>, IDisposable
     {
         readonly UnityEvent<string, int, int> innerEvent;
         readonly UnityAction<string, int, int> invokeDelegate;

@@ -1,7 +1,8 @@
 {
-    "name": "UniTask.Addressables",
+    "name": "UnityEssentials.Tasks.Addressables",
+    "rootNamespace": "",
     "references": [
-        "UniTask",
+        "UnityEssentials.Tasks",
         "Unity.ResourceManager",
         "Unity.Addressables"
     ],
@@ -18,7 +19,7 @@
             "expression": "",
             "define": "UNITASK_ADDRESSABLE_SUPPORT"
         },
-	{
+        {
             "name": "com.unity.addressables.cn",
             "expression": "",
             "define": "UNITASK_ADDRESSABLE_SUPPORT"

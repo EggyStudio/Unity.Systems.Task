@@ -1,8 +1,8 @@
 {
-    "name": "UniTask.DOTween",
+    "name": "UnityEssentials.Tasks.Linq",
+    "rootNamespace": "",
     "references": [
-        "UniTask",
-        "DOTween.Modules"
+        "UnityEssentials.Tasks"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -11,12 +11,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.demigiant.dotween",
-            "expression": "",
-            "define": "UNITASK_DOTWEEN_SUPPORT"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

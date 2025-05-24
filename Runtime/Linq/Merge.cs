@@ -54,7 +54,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
         public IUniTaskAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default)
             => new _Merge(sources, cancellationToken);
 
-        enum MergeSourceState
+        public enum MergeSourceState
         {
             Pending,
             Running,

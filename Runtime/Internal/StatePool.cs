@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace UnityEssentials.Threading.Tasks.Internal
 {
-    internal static class StateTuple
+    public static class StateTuple
     {
         public static StateTuple<T1> Create<T1>(T1 item1)
         {
@@ -22,7 +22,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal class StateTuple<T1> : IDisposable
+    public class StateTuple<T1> : IDisposable
     {
         public T1 Item1;
 
@@ -37,7 +37,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal static class StatePool<T1>
+    public static class StatePool<T1>
     {
         static readonly ConcurrentQueue<StateTuple<T1>> queue = new ConcurrentQueue<StateTuple<T1>>();
 
@@ -61,7 +61,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal class StateTuple<T1, T2> : IDisposable
+    public class StateTuple<T1, T2> : IDisposable
     {
         public T1 Item1;
         public T2 Item2;
@@ -78,7 +78,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal static class StatePool<T1, T2>
+    public static class StatePool<T1, T2>
     {
         static readonly ConcurrentQueue<StateTuple<T1, T2>> queue = new ConcurrentQueue<StateTuple<T1, T2>>();
 
@@ -104,7 +104,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal class StateTuple<T1, T2, T3> : IDisposable
+    public class StateTuple<T1, T2, T3> : IDisposable
     {
         public T1 Item1;
         public T2 Item2;
@@ -123,7 +123,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
         }
     }
 
-    internal static class StatePool<T1, T2, T3>
+    public static class StatePool<T1, T2, T3>
     {
         static readonly ConcurrentQueue<StateTuple<T1, T2, T3>> queue = new ConcurrentQueue<StateTuple<T1, T2, T3>>();
 

@@ -689,7 +689,7 @@ namespace UnityEssentials.Threading.Tasks
         }
     }
 
-    internal static class CompletedTasks
+    public static class CompletedTasks
     {
         public static readonly Task<AsyncUnit> AsyncUnit = Task.FromResult(UnityEssentials.Threading.Tasks.AsyncUnit.Default);
         public static readonly Task<bool> True = Task.FromResult(true);
