@@ -109,7 +109,7 @@ namespace UnityEssentials.Threading.Tasks
         /// <summary>
         /// helper of fire and forget void action.
         /// </summary>
-        public static void Void(Func<UniTaskVoid> asyncAction)
+        public static void Void(Func<TaskVoid> asyncAction)
         {
             asyncAction().Forget();
         }
@@ -117,7 +117,7 @@ namespace UnityEssentials.Threading.Tasks
         /// <summary>
         /// helper of fire and forget void action.
         /// </summary>
-        public static void Void(Func<CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static void Void(Func<CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             asyncAction(cancellationToken).Forget();
         }
@@ -125,7 +125,7 @@ namespace UnityEssentials.Threading.Tasks
         /// <summary>
         /// helper of fire and forget void action.
         /// </summary>
-        public static void Void<T>(Func<T, UniTaskVoid> asyncAction, T state)
+        public static void Void<T>(Func<T, TaskVoid> asyncAction, T state)
         {
             asyncAction(state).Forget();
         }
@@ -134,7 +134,7 @@ namespace UnityEssentials.Threading.Tasks
         /// helper of create add UniTaskVoid to delegate.
         /// For example: FooAction = UniTask.Action(async () => { /* */ })
         /// </summary>
-        public static Action Action(Func<UniTaskVoid> asyncAction)
+        public static Action Action(Func<TaskVoid> asyncAction)
         {
             return () => asyncAction().Forget();
         }
@@ -142,7 +142,7 @@ namespace UnityEssentials.Threading.Tasks
         /// <summary>
         /// helper of create add UniTaskVoid to delegate.
         /// </summary>
-        public static Action Action(Func<CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static Action Action(Func<CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return () => asyncAction(cancellationToken).Forget();
         }
@@ -150,7 +150,7 @@ namespace UnityEssentials.Threading.Tasks
         /// <summary>
         /// helper of create add UniTaskVoid to delegate.
         /// </summary>
-        public static Action Action<T>(T state, Func<T, UniTaskVoid> asyncAction)
+        public static Action Action<T>(T state, Func<T, TaskVoid> asyncAction)
         {
             return () => asyncAction(state).Forget();
         }
@@ -161,7 +161,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async () => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction UnityAction(Func<UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction UnityAction(Func<TaskVoid> asyncAction)
         {
             return () => asyncAction().Forget();
         }
@@ -170,7 +170,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(FooAsync, this.GetCancellationTokenOnDestroy()))
         /// </summary>
-        public static UnityEngine.Events.UnityAction UnityAction(Func<CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static UnityEngine.Events.UnityAction UnityAction(Func<CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return () => asyncAction(cancellationToken).Forget();
         }
@@ -179,7 +179,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(FooAsync, Argument))
         /// </summary>
-        public static UnityEngine.Events.UnityAction UnityAction<T>(T state, Func<T, UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction UnityAction<T>(T state, Func<T, TaskVoid> asyncAction)
         {
             return () => asyncAction(state).Forget();
         }
@@ -188,7 +188,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T arg) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T> UnityAction<T>(Func<T, UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction<T> UnityAction<T>(Func<T, TaskVoid> asyncAction)
         {
             return (arg) => asyncAction(arg).Forget();
         }
@@ -197,7 +197,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1> UnityAction<T0, T1>(Func<T0, T1, UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction<T0, T1> UnityAction<T0, T1>(Func<T0, T1, TaskVoid> asyncAction)
         {
             return (arg0, arg1) => asyncAction(arg0, arg1).Forget();
         }
@@ -206,7 +206,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1, T2 arg2) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1, T2> UnityAction<T0, T1, T2>(Func<T0, T1, T2, UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction<T0, T1, T2> UnityAction<T0, T1, T2>(Func<T0, T1, T2, TaskVoid> asyncAction)
         {
             return (arg0, arg1, arg2) => asyncAction(arg0, arg1, arg2).Forget();
         }
@@ -215,7 +215,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1, T2 arg2, T3 arg3) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1, T2, T3> UnityAction<T0, T1, T2, T3>(Func<T0, T1, T2, T3, UniTaskVoid> asyncAction)
+        public static UnityEngine.Events.UnityAction<T0, T1, T2, T3> UnityAction<T0, T1, T2, T3>(Func<T0, T1, T2, T3, TaskVoid> asyncAction)
         {
             return (arg0, arg1, arg2, arg3) => asyncAction(arg0, arg1, arg2, arg3).Forget();
         }
@@ -224,7 +224,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T arg, CancellationToken cancellationToken) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T> UnityAction<T>(Func<T, CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static UnityEngine.Events.UnityAction<T> UnityAction<T>(Func<T, CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return (arg) => asyncAction(arg, cancellationToken).Forget();
         }
@@ -233,7 +233,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1, CancellationToken cancellationToken) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1> UnityAction<T0, T1>(Func<T0, T1, CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static UnityEngine.Events.UnityAction<T0, T1> UnityAction<T0, T1>(Func<T0, T1, CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return (arg0, arg1) => asyncAction(arg0, arg1, cancellationToken).Forget();
         }
@@ -242,7 +242,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1, T2 arg2, CancellationToken cancellationToken) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1, T2> UnityAction<T0, T1, T2>(Func<T0, T1, T2, CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static UnityEngine.Events.UnityAction<T0, T1, T2> UnityAction<T0, T1, T2>(Func<T0, T1, T2, CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return (arg0, arg1, arg2) => asyncAction(arg0, arg1, arg2, cancellationToken).Forget();
         }
@@ -251,7 +251,7 @@ namespace UnityEssentials.Threading.Tasks
         /// Create async void(UniTaskVoid) UnityAction.
         /// For example: onClick.AddListener(UniTask.UnityAction(async (T0 arg0, T1 arg1, T2 arg2, T3 arg3, CancellationToken cancellationToken) => { /* */ } ))
         /// </summary>
-        public static UnityEngine.Events.UnityAction<T0, T1, T2, T3> UnityAction<T0, T1, T2, T3>(Func<T0, T1, T2, T3, CancellationToken, UniTaskVoid> asyncAction, CancellationToken cancellationToken)
+        public static UnityEngine.Events.UnityAction<T0, T1, T2, T3> UnityAction<T0, T1, T2, T3>(Func<T0, T1, T2, T3, CancellationToken, TaskVoid> asyncAction, CancellationToken cancellationToken)
         {
             return (arg0, arg1, arg2, arg3) => asyncAction(arg0, arg1, arg2, arg3, cancellationToken).Forget();
         }

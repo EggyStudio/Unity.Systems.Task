@@ -45,7 +45,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return connectedDisposable;
         }
 
-        async UniTaskVoid ConsumeEnumerator()
+        async TaskVoid ConsumeEnumerator()
         {
             try
             {

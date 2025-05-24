@@ -152,7 +152,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateInnerHashSet()
+            async TaskVoid CreateInnerHashSet()
             {
                 try
                 {
@@ -344,7 +344,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateInnerHashSet()
+            async TaskVoid CreateInnerHashSet()
             {
                 try
                 {
@@ -574,7 +574,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateInnerHashSet()
+            async TaskVoid CreateInnerHashSet()
             {
                 try
                 {

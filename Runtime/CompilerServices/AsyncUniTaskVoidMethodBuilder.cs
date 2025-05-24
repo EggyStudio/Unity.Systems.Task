@@ -23,7 +23,7 @@ namespace UnityEssentials.Threading.Tasks.CompilerServices
         }
 
         // 2. TaskLike Task property(void)
-        public UniTaskVoid Task
+        public TaskVoid Task
         {
             [DebuggerHidden]
             [MethodImpl(MethodImplOptions.AggressiveInlining)]

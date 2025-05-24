@@ -150,7 +150,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateLookup()
+            async TaskVoid CreateLookup()
             {
                 try
                 {
@@ -296,7 +296,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateLookup()
+            async TaskVoid CreateLookup()
             {
                 try
                 {
@@ -491,7 +491,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return new Task<bool>(this, completionSource.Version);
             }
 
-            async UniTaskVoid CreateLookup()
+            async TaskVoid CreateLookup()
             {
                 try
                 {

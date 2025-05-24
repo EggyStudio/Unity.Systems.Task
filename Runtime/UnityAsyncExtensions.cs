@@ -252,15 +252,15 @@ namespace UnityEssentials.Threading.Tasks
 
         public static Task<UnityEngine.Object> WithCancellation(this ResourceRequest asyncOperation, CancellationToken cancellationToken)
         {
-            return ToUniTask(asyncOperation, cancellationToken: cancellationToken);
+            return ToTask(asyncOperation, cancellationToken: cancellationToken);
         }
 
         public static Task<UnityEngine.Object> WithCancellation(this ResourceRequest asyncOperation, CancellationToken cancellationToken, bool cancelImmediately)
         {
-            return ToUniTask(asyncOperation, cancellationToken: cancellationToken, cancelImmediately: cancelImmediately);
+            return ToTask(asyncOperation, cancellationToken: cancellationToken, cancelImmediately: cancelImmediately);
         }
 
-        public static Task<UnityEngine.Object> ToUniTask(this ResourceRequest asyncOperation, IProgress<float> progress = null, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken), bool cancelImmediately = false)
+        public static Task<UnityEngine.Object> ToTask(this ResourceRequest asyncOperation, IProgress<float> progress = null, PlayerLoopTiming timing = PlayerLoopTiming.Update, CancellationToken cancellationToken = default(CancellationToken), bool cancelImmediately = false)
         {
             Error.ThrowArgumentNullException(asyncOperation, nameof(asyncOperation));
             if (cancellationToken.IsCancellationRequested) return Task.FromCanceled<UnityEngine.Object>(cancellationToken);

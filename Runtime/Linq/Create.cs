@@ -102,7 +102,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return;
             }
 
-            async UniTaskVoid RunWriterTask(Task task)
+            async TaskVoid RunWriterTask(Task task)
             {
                 try
                 {

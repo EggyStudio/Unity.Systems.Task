@@ -146,7 +146,7 @@ namespace UnityEssentials.Threading.Tasks
                 }
             }
 
-            static async UniTaskVoid RunWhenEachTask(Enumerator self, Task<T> task, int length)
+            static async TaskVoid RunWhenEachTask(Enumerator self, Task<T> task, int length)
             {
                 try
                 {

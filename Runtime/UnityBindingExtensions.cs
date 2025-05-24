@@ -22,7 +22,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, text, cancellationToken, rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore(IUniTaskAsyncEnumerable<string> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore(IUniTaskAsyncEnumerable<string> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:
@@ -83,7 +83,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, text, text.GetCancellationTokenOnDestroy(), rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore<T>(IUniTaskAsyncEnumerable<T> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore<T>(IUniTaskAsyncEnumerable<T> source, UnityEngine.UI.Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:
@@ -139,7 +139,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, selectable, cancellationToken, rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore(IUniTaskAsyncEnumerable<bool> source, Selectable selectable, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore(IUniTaskAsyncEnumerable<bool> source, Selectable selectable, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:
@@ -198,7 +198,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, bindTarget, bindAction, cancellationToken, rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore<TSource, TObject>(IUniTaskAsyncEnumerable<TSource> source, TObject bindTarget, Action<TObject, TSource> bindAction, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore<TSource, TObject>(IUniTaskAsyncEnumerable<TSource> source, TObject bindTarget, Action<TObject, TSource> bindAction, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:

@@ -46,7 +46,7 @@ namespace UnityEssentials.Threading.Tasks
             return ToCancellationToken(task.AsUniTask(), linkToken);
         }
 
-        static async UniTaskVoid ToCancellationTokenCore(Task task, CancellationTokenSource cts)
+        static async TaskVoid ToCancellationTokenCore(Task task, CancellationTokenSource cts)
         {
             try
             {

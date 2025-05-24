@@ -72,7 +72,7 @@ namespace UnityEssentials.Threading.Tasks
             return subject;
         }
 
-        static async UniTaskVoid Fire<T>(AsyncSubject<T> subject, Task<T> task)
+        static async TaskVoid Fire<T>(AsyncSubject<T> subject, Task<T> task)
         {
             T value;
             try
@@ -89,7 +89,7 @@ namespace UnityEssentials.Threading.Tasks
             subject.OnCompleted();
         }
 
-        static async UniTaskVoid Fire(AsyncSubject<AsyncUnit> subject, Task task)
+        static async TaskVoid Fire(AsyncSubject<AsyncUnit> subject, Task task)
         {
             try
             {

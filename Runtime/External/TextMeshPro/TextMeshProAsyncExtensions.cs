@@ -20,7 +20,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, text, cancellationToken, rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore(IUniTaskAsyncEnumerable<string> source, TMP_Text text, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore(IUniTaskAsyncEnumerable<string> source, TMP_Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:
@@ -81,7 +81,7 @@ namespace UnityEssentials.Threading.Tasks
             BindToCore(source, text, text.GetCancellationTokenOnDestroy(), rebindOnError).Forget();
         }
 
-        static async UniTaskVoid BindToCore<T>(IUniTaskAsyncEnumerable<T> source, TMP_Text text, CancellationToken cancellationToken, bool rebindOnError)
+        static async TaskVoid BindToCore<T>(IUniTaskAsyncEnumerable<T> source, TMP_Text text, CancellationToken cancellationToken, bool rebindOnError)
         {
             var repeat = false;
             BIND_AGAIN:

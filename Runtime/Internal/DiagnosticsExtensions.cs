@@ -42,7 +42,7 @@ namespace UnityEssentials.Threading.Tasks.Internal
             { typeof(ushort), "ushort" },
             { typeof(Task), "Task" },
             { typeof(Task), "UniTask" },
-            { typeof(UniTaskVoid), "UniTaskVoid" }
+            { typeof(TaskVoid), "UniTaskVoid" }
         };
 
         public static string CleanupAsyncStackTrace(this StackTrace stackTrace)

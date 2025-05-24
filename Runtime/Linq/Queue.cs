@@ -60,7 +60,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 return channelEnumerator.MoveNextAsync();
             }
 
-            static async UniTaskVoid ConsumeAll(_Queue self, IUniTaskAsyncEnumerator<TSource> enumerator, ChannelWriter<TSource> writer)
+            static async TaskVoid ConsumeAll(_Queue self, IUniTaskAsyncEnumerator<TSource> enumerator, ChannelWriter<TSource> writer)
             {
                 try
                 {

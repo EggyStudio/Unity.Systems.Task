@@ -449,7 +449,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 }
             }
 
-            async UniTaskVoid CreateSortSource()
+            async TaskVoid CreateSortSource()
             {
                 try
                 {

@@ -338,7 +338,7 @@ namespace UnityEssentials.Threading.Tasks
             ConsumeEnumerator(source, cancellationToken).Forget();
         }
 
-        async UniTaskVoid ConsumeEnumerator(IUniTaskAsyncEnumerable<T> source, CancellationToken cancellationToken)
+        async TaskVoid ConsumeEnumerator(IUniTaskAsyncEnumerable<T> source, CancellationToken cancellationToken)
         {
             enumerator = source.GetAsyncEnumerator(cancellationToken);
             try

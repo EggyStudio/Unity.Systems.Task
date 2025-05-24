@@ -154,7 +154,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 }
             }
 
-            async UniTaskVoid RunOther(Task other)
+            async TaskVoid RunOther(Task other)
             {
                 try
                 {

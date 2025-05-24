@@ -132,7 +132,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
                 }
             }
 
-            async UniTaskVoid RunSecondAfterDisposeAsync()
+            async TaskVoid RunSecondAfterDisposeAsync()
             {
                 try
                 {

@@ -19,7 +19,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return cts;
         }
 
-        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> action)
+        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> action)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
@@ -29,7 +29,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return cts;
         }
 
-        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTaskVoid> action)
+        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, TaskVoid> action)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
@@ -47,7 +47,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Subscribes.SubscribeCore(source, action, Subscribes.NopError, Subscribes.NopCompleted, cancellationToken).Forget();
         }
 
-        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> action, CancellationToken cancellationToken)
+        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> action, CancellationToken cancellationToken)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
@@ -55,7 +55,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Subscribes.SubscribeCore(source, action, Subscribes.NopError, Subscribes.NopCompleted, cancellationToken).Forget();
         }
 
-        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTaskVoid> action, CancellationToken cancellationToken)
+        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, TaskVoid> action, CancellationToken cancellationToken)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
@@ -112,7 +112,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return cts;
         }
 
-        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action<Exception> onError)
+        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> onNext, Action<Exception> onError)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
@@ -132,7 +132,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Subscribes.SubscribeCore(source, onNext, onError, Subscribes.NopCompleted, cancellationToken).Forget();
         }
 
-        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action<Exception> onError, CancellationToken cancellationToken)
+        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> onNext, Action<Exception> onError, CancellationToken cancellationToken)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
@@ -194,7 +194,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return cts;
         }
 
-        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action onCompleted)
+        public static IDisposable Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> onNext, Action onCompleted)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
@@ -214,7 +214,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Subscribes.SubscribeCore(source, onNext, Subscribes.NopError, onCompleted, cancellationToken).Forget();
         }
 
-        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action onCompleted, CancellationToken cancellationToken)
+        public static void Subscribe<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> onNext, Action onCompleted, CancellationToken cancellationToken)
         {
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(onNext, nameof(onNext));
@@ -304,7 +304,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
         public static readonly Action<Exception> NopError = _ => { };
         public static readonly Action NopCompleted = () => { };
 
-        public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Action<TSource> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Action<TSource> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try
@@ -343,7 +343,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             }
         }
 
-        public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, UniTaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, TaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try
@@ -382,7 +382,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             }
         }
 
-        public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, UniTaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, TaskVoid> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try
@@ -421,7 +421,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             }
         }
 
-        public static async UniTaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, IObserver<TSource> observer, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, IObserver<TSource> observer, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try
@@ -454,7 +454,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             }
         }
 
-        public static async UniTaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Task> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Task> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try
@@ -493,7 +493,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             }
         }
 
-        public static async UniTaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, Task> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
+        public static async TaskVoid SubscribeAwaitCore<TSource>(IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, Task> onNext, Action<Exception> onError, Action onCompleted, CancellationToken cancellationToken)
         {
             var e = source.GetAsyncEnumerator(cancellationToken);
             try

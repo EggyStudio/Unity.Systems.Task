@@ -32,7 +32,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             return ctd;
         }
 
-        static async UniTaskVoid RunAsync(IUniTaskAsyncEnumerable<T> src, IObserver<T> observer, CancellationToken cancellationToken)
+        static async TaskVoid RunAsync(IUniTaskAsyncEnumerable<T> src, IObserver<T> observer, CancellationToken cancellationToken)
         {
             // cancellationToken.IsCancellationRequested is called when Rx's Disposed.
             // when disposed, finish silently.

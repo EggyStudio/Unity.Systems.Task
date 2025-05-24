@@ -251,7 +251,7 @@ namespace UnityEssentials.Threading.Tasks
                 RunTask(task).Forget();
             }
 
-            async UniTaskVoid RunTask(Task task)
+            async TaskVoid RunTask(Task task)
             {
                 try
                 {
@@ -310,7 +310,7 @@ namespace UnityEssentials.Threading.Tasks
                 RunTask(task).Forget();
             }
 
-            async UniTaskVoid RunTask(Task<T> task)
+            async TaskVoid RunTask(Task<T> task)
             {
                 try
                 {
@@ -593,7 +593,7 @@ namespace UnityEssentials.Threading.Tasks
             }
         }
 
-        static async UniTaskVoid ForgetCoreWithCatch(Task task, Action<Exception> exceptionHandler, bool handleExceptionOnMainThread)
+        static async TaskVoid ForgetCoreWithCatch(Task task, Action<Exception> exceptionHandler, bool handleExceptionOnMainThread)
         {
             try
             {
@@ -663,7 +663,7 @@ namespace UnityEssentials.Threading.Tasks
             }
         }
 
-        static async UniTaskVoid ForgetCoreWithCatch<T>(Task<T> task, Action<Exception> exceptionHandler, bool handleExceptionOnMainThread)
+        static async TaskVoid ForgetCoreWithCatch<T>(Task<T> task, Action<Exception> exceptionHandler, bool handleExceptionOnMainThread)
         {
             try
             {
@@ -799,7 +799,7 @@ namespace UnityEssentials.Threading.Tasks
                 this.task = task;
             }
 
-            async UniTaskVoid RunTask(Task task)
+            async TaskVoid RunTask(Task task)
             {
                 try
                 {
@@ -864,7 +864,7 @@ namespace UnityEssentials.Threading.Tasks
                 this.exceptionHandler = exceptionHandler;
             }
 
-            async UniTaskVoid RunTask(Task<T> task)
+            async TaskVoid RunTask(Task<T> task)
             {
                 try
                 {

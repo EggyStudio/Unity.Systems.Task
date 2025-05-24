@@ -9,7 +9,7 @@ using UnityEssentials.Threading.Tasks.CompilerServices;
 namespace UnityEssentials.Threading.Tasks
 {
     [AsyncMethodBuilder(typeof(AsyncUniTaskVoidMethodBuilder))]
-    public readonly struct UniTaskVoid
+    public readonly struct TaskVoid
     {
         public void Forget()
         {
