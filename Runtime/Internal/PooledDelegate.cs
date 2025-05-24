@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace UnityEssentials.Threading.Tasks.Internal
 {
-    internal sealed class PooledDelegate<T> : ITaskPoolNode<PooledDelegate<T>>
+    public sealed class PooledDelegate<T> : ITaskPoolNode<PooledDelegate<T>>
     {
         static TaskPool<PooledDelegate<T>> pool;
 
