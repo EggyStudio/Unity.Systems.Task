@@ -1,17 +1,15 @@
 {
-    "name": "UnityEssentials.Tasks.Editor",
+    "name": "UnityEssentials.Task.Linq",
     "rootNamespace": "",
     "references": [
-        "UnityEssentials.Tasks"
+        "UnityEssentials.Task"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
+    "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
