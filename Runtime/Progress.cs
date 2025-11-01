@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     /// <summary>
     /// Lightweight IProgress[T] factory.

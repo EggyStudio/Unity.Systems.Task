@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace UnityEssentials.Threading.Tasks.CompilerServices
+namespace UnityEssentials
 {
     [StructLayout(LayoutKind.Auto)]
     public struct AsyncUniTaskMethodBuilder
@@ -163,11 +163,11 @@ namespace UnityEssentials.Threading.Tasks.CompilerServices
                 }
                 else if (ex != null)
                 {
-                    return Tasks.Task.FromException<T>(ex);
+                    return UnityEssentials.Task.FromException<T>(ex);
                 }
                 else
                 {
-                    return Tasks.Task.FromResult(result);
+                    return UnityEssentials.Task.FromResult(result);
                 }
             }
         }

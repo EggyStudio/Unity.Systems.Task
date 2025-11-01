@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public class UniTaskSynchronizationContext : SynchronizationContext
     {

@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {
         public static IUniTaskAsyncEnumerable<T> Never<T>()
         {
-            return UnityEssentials.Threading.Tasks.Linq.Never<T>.Instance;
+            return UnityEssentials.Never<T>.Instance;
         }
     }
 

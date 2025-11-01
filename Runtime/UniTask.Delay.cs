@@ -1,13 +1,13 @@
 ﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public enum DelayType
     {

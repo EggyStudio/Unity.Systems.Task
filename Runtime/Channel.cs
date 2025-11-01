@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class Channel
     {

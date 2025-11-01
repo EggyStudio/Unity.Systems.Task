@@ -4,7 +4,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class CancellationTokenExtensions
     {

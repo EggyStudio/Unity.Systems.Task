@@ -8,7 +8,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public enum UniTaskStatus
     {

@@ -1,8 +1,8 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {
@@ -10,7 +10,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
         {
             Error.ThrowArgumentNullException(source, nameof(source));
 
-            return UnityEssentials.Threading.Tasks.Linq.ToList.ToListAsync(source, cancellationToken);
+            return UnityEssentials.ToList.ToListAsync(source, cancellationToken);
         }
     }
 

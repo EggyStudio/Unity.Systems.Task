@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     // internally used but public, allow to user create custom operator with pooling.
 

@@ -1,4 +1,4 @@
-﻿namespace UnityEssentials.Threading.Tasks.Linq
+﻿namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {

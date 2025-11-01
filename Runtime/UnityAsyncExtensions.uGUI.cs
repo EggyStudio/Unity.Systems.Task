@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UnityAsyncExtensions
     {

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 #endif
 
-namespace UnityEssentials.Threading.Tasks.Triggers
+namespace UnityEssentials
 {
 #region FixedUpdate
 

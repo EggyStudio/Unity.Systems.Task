@@ -1,7 +1,7 @@
 ﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 using System.Collections.Generic;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UniTaskExtensions
     {

@@ -1,10 +1,10 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public partial struct Task
     {

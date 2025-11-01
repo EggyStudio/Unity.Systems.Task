@@ -2,14 +2,14 @@
 
 #if UNITASK_DOTWEEN_SUPPORT
 
-using Cysharp.Threading.Tasks.Internal;
+using UnityEssentials;
 using DG.Tweening;
 using System;
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
-namespace Cysharp.Threading.Tasks
+namespace UnityEssentials
 {
     public enum TweenCancelBehaviour
     {

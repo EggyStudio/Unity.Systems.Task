@@ -7,9 +7,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Threading;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public interface IResolvePromise
     {

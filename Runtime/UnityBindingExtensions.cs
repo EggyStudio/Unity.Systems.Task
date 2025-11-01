@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 #endif
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class UnityBindingExtensions
     {

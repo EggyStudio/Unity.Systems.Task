@@ -1,8 +1,8 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {
@@ -11,7 +11,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAsync(source, action, cancellationToken);
         }
 
         public static Task ForEachAsync<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Action<TSource, Int32> action, CancellationToken cancellationToken = default)
@@ -19,7 +19,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAsync(source, action, cancellationToken);
         }
 
         /// <summary>Obsolete(Error), Use Use ForEachAwaitAsync instead.</summary>
@@ -43,7 +43,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAwaitAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAwaitAsync(source, action, cancellationToken);
         }
 
         public static Task ForEachAwaitAsync<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Int32, Task> action, CancellationToken cancellationToken = default)
@@ -51,7 +51,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAwaitAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAwaitAsync(source, action, cancellationToken);
         }
 
         public static Task ForEachAwaitWithCancellationAsync<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, Task> action, CancellationToken cancellationToken = default)
@@ -59,7 +59,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAwaitWithCancellationAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAwaitWithCancellationAsync(source, action, cancellationToken);
         }
 
         public static Task ForEachAwaitWithCancellationAsync<TSource>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Int32, CancellationToken, Task> action, CancellationToken cancellationToken = default)
@@ -67,7 +67,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(action, nameof(action));
 
-            return UnityEssentials.Threading.Tasks.Linq.ForEach.ForEachAwaitWithCancellationAsync(source, action, cancellationToken);
+            return UnityEssentials.ForEach.ForEachAwaitWithCancellationAsync(source, action, cancellationToken);
         }
     }
 

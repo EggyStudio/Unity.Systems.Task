@@ -1,8 +1,8 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {
@@ -11,7 +11,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.Select<TSource, TResult>(source, selector);
+            return new UnityEssentials.Select<TSource, TResult>(source, selector);
         }
 
         public static IUniTaskAsyncEnumerable<TResult> Select<TSource, TResult>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Int32, TResult> selector)
@@ -19,7 +19,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.SelectInt<TSource, TResult>(source, selector);
+            return new UnityEssentials.SelectInt<TSource, TResult>(source, selector);
         }
 
         public static IUniTaskAsyncEnumerable<TResult> SelectAwait<TSource, TResult>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Task<TResult>> selector)
@@ -27,7 +27,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.SelectAwait<TSource, TResult>(source, selector);
+            return new UnityEssentials.SelectAwait<TSource, TResult>(source, selector);
         }
 
         public static IUniTaskAsyncEnumerable<TResult> SelectAwait<TSource, TResult>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Int32, Task<TResult>> selector)
@@ -35,7 +35,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.SelectIntAwait<TSource, TResult>(source, selector);
+            return new UnityEssentials.SelectIntAwait<TSource, TResult>(source, selector);
         }
 
         public static IUniTaskAsyncEnumerable<TResult> SelectAwaitWithCancellation<TSource, TResult>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, CancellationToken, Task<TResult>> selector)
@@ -43,7 +43,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.SelectAwaitWithCancellation<TSource, TResult>(source, selector);
+            return new UnityEssentials.SelectAwaitWithCancellation<TSource, TResult>(source, selector);
         }
 
         public static IUniTaskAsyncEnumerable<TResult> SelectAwaitWithCancellation<TSource, TResult>(this IUniTaskAsyncEnumerable<TSource> source, Func<TSource, Int32, CancellationToken, Task<TResult>> selector)
@@ -51,7 +51,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
             Error.ThrowArgumentNullException(source, nameof(source));
             Error.ThrowArgumentNullException(selector, nameof(selector));
 
-            return new UnityEssentials.Threading.Tasks.Linq.SelectIntAwaitWithCancellation<TSource, TResult>(source, selector);
+            return new UnityEssentials.SelectIntAwaitWithCancellation<TSource, TResult>(source, selector);
         }
     }
 

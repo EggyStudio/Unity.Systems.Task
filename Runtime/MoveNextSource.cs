@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public abstract class MoveNextSource : IUniTaskSource<bool>
     {

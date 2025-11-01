@@ -2,9 +2,8 @@
 
 using System.Threading;
 using UnityEngine;
-using UnityEssentials.Threading.Tasks.Triggers;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class UniTaskCancellationExtensions
     {
@@ -37,15 +36,12 @@ namespace UnityEssentials.Threading.Tasks
             return component.GetAsyncDestroyTrigger().CancellationToken;
         }
     }
-}
-
-namespace UnityEssentials.Threading.Tasks.Triggers
-{
+    
     public static partial class AsyncTriggerExtensions
     {
         // Util.
 
-        static T GetOrAddComponent<T>(GameObject gameObject)
+        public static T GetOrAddComponent<T>(GameObject gameObject)
             where T : Component
         {
 #if UNITY_2019_2_OR_NEWER

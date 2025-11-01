@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     public static class UnityEqualityComparer
     {

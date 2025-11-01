@@ -3,13 +3,13 @@
 #if UNITY_2018_4 || UNITY_2019_4_OR_NEWER
 #if UNITASK_ASSETBUNDLE_SUPPORT
 
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UnityAsyncExtensions
     {

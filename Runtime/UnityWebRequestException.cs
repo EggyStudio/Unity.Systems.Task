@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public class UnityWebRequestException : Exception
     {

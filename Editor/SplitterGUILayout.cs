@@ -6,7 +6,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks.Editor
+namespace UnityEssentials
 {
     // reflection call of UnityEditor.SplitterGUILayout
     internal static class SplitterGUILayout

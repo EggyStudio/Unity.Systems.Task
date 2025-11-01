@@ -4,15 +4,14 @@
 #if UNITASK_NETCORE || UNITY_2022_3_OR_NEWER
 #define SUPPORT_VALUETASK
 #endif
-
-using UnityEssentials.Threading.Tasks.CompilerServices;
+using UnityEssentials;
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     internal static class AwaiterActions
     {

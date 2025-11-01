@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     internal static class DiagnosticsExtensions
     {

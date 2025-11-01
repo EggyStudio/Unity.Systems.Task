@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     public static class StateTuple
     {

@@ -1,12 +1,12 @@
 ﻿#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public partial struct Task
     {
@@ -691,7 +691,7 @@ namespace UnityEssentials.Threading.Tasks
 
     public static class CompletedTasks
     {
-        public static readonly Task<AsyncUnit> AsyncUnit = Task.FromResult(UnityEssentials.Threading.Tasks.AsyncUnit.Default);
+        public static readonly Task<AsyncUnit> AsyncUnit = Task.FromResult(UnityEssentials.AsyncUnit.Default);
         public static readonly Task<bool> True = Task.FromResult(true);
         public static readonly Task<bool> False = Task.FromResult(false);
         public static readonly Task<int> Zero = Task.FromResult(0);

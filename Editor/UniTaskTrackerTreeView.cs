@@ -7,11 +7,11 @@ using System.Linq;
 using System.Reflection;
 using System;
 using UnityEditor.IMGUI.Controls;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace UnityEssentials.Threading.Tasks.Editor
+namespace UnityEssentials
 {
     public class UniTaskTrackerViewItem : TreeViewItem
     {

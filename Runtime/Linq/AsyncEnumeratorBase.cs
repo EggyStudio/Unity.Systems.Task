@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     // note: refactor all inherit class and should remove this.
     // see Select and Where.

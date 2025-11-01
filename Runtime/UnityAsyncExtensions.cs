@@ -4,12 +4,12 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using UnityEngine;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 #if ENABLE_UNITYWEBREQUEST && (!UNITY_2019_1_OR_NEWER || UNITASK_WEBREQUEST_SUPPORT)
 using UnityEngine.Networking;
 #endif
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UnityAsyncExtensions
     {

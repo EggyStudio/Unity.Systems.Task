@@ -2,11 +2,9 @@
 
 using System.Threading;
 using UnityEngine;
-using UnityEssentials.Threading.Tasks.Triggers;
 using System;
-using UnityEssentials.Threading.Tasks.Internal;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
 
     public static partial class CancellationTokenSourceExtensions

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     internal readonly struct ValueStopwatch
     {

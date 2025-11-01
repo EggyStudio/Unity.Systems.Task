@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Threading;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public partial struct Task
     {

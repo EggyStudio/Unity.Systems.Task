@@ -3,7 +3,7 @@
 using System;
 using System.Collections;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     // UnityEngine Bridges.
 

@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class EnumerableAsyncExtensions
     {

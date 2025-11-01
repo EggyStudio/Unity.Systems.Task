@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     // Same interface as System.Buffers.ArrayPool<T> but only provides Shared.
 

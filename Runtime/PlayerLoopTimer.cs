@@ -2,10 +2,10 @@
 
 using System.Threading;
 using System;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public abstract class PlayerLoopTimer : IDisposable, IPlayerLoopItem
     {

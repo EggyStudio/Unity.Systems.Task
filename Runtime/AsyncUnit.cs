@@ -2,7 +2,7 @@
 
 using System;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public readonly struct AsyncUnit : IEquatable<AsyncUnit>
     {

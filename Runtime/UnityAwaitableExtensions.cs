@@ -1,5 +1,5 @@
 #if UNITY_2023_1_OR_NEWER
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class UnityAwaitableExtensions
     {

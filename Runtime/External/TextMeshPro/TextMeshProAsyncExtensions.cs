@@ -5,7 +5,7 @@ using System.Threading;
 using TMPro;
 using UnityEngine.Events;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class TextMeshProAsyncExtensions
     {

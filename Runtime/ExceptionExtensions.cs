@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class ExceptionExtensions
     {

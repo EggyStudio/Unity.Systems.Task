@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Threading;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     // public for add user custom.
 

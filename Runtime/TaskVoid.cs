@@ -3,10 +3,9 @@
 
 using System;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using UnityEssentials.Threading.Tasks.CompilerServices;
+using System.Runtime.CompilerServices;using UnityEssentials;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     [AsyncMethodBuilder(typeof(AsyncUniTaskVoidMethodBuilder))]
     public readonly struct TaskVoid

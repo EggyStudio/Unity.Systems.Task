@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     internal sealed class ContinuationQueue
     {

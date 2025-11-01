@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public class CancellationTokenEqualityComparer : IEqualityComparer<CancellationToken>
     {

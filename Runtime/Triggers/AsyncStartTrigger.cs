@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks.Triggers
+namespace UnityEssentials
 {
     public static partial class AsyncTriggerExtensions
     {

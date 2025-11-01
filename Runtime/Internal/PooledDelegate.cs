@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     public sealed class PooledDelegate<T> : ITaskPoolNode<PooledDelegate<T>>
     {

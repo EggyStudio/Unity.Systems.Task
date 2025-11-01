@@ -1,11 +1,11 @@
-﻿using UnityEssentials.Threading.Tasks;
-using UnityEssentials.Threading.Tasks.Internal;
-using UnityEssentials.Threading.Tasks.Linq;
+﻿
+using UnityEssentials;
+
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {

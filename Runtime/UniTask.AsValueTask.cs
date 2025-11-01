@@ -10,7 +10,7 @@ using System;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class UniTaskValueTaskExtensions
     {

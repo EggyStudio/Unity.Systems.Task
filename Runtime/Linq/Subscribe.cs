@@ -1,9 +1,9 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System;
 using System.Threading;
-using Subscribes = UnityEssentials.Threading.Tasks.Linq.Subscribe;
+using Subscribes = UnityEssentials.Subscribe;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {

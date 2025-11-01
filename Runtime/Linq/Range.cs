@@ -1,7 +1,7 @@
-﻿using UnityEssentials.Threading.Tasks.Internal;
+﻿using UnityEssentials;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks.Linq
+namespace UnityEssentials
 {
     public static partial class UniTaskAsyncEnumerable
     {
@@ -14,7 +14,7 @@ namespace UnityEssentials.Threading.Tasks.Linq
 
             if (count == 0) UniTaskAsyncEnumerable.Empty<int>();
 
-            return new UnityEssentials.Threading.Tasks.Linq.Range(start, count);
+            return new UnityEssentials.Range(start, count);
         }
     }
 

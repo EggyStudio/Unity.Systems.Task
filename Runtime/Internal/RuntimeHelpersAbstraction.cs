@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 #endif
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     public static class RuntimeHelpersAbstraction
     {

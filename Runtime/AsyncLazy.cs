@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public class AsyncLazy
     {

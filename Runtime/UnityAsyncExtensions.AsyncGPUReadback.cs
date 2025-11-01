@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using UnityEngine.Rendering;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UnityAsyncExtensions
     {

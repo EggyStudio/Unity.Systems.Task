@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks.Internal
+namespace UnityEssentials
 {
     internal sealed class PlayerLoopRunner
     {

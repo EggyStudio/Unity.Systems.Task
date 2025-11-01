@@ -3,7 +3,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System.Threading;
 
 #if UNITY_2019_3_OR_NEWER
@@ -18,7 +18,7 @@ using PlayerLoopType = UnityEngine.Experimental.PlayerLoop;
 using UnityEditor;
 #endif
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class UniTaskLoopRunners
     {

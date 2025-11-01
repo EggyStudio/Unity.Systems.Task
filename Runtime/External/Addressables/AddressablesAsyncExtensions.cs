@@ -2,7 +2,7 @@
 
 #if UNITASK_ADDRESSABLE_SUPPORT
 
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
@@ -10,7 +10,7 @@ using System.Threading;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class AddressablesAsyncExtensions
     {

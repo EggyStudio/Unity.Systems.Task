@@ -5,12 +5,12 @@
 
 #if UNITY_2022_SUPPORT || UNITY_2023_3_OR_NEWER
 
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using System;
 using System.Threading;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class AsyncInstantiateOperationExtensions
     {

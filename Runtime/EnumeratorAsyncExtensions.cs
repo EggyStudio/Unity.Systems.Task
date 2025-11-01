@@ -5,10 +5,10 @@ using System.Collections;
 using System.Reflection;
 using System.Runtime.ExceptionServices;
 using System.Threading;
-using UnityEssentials.Threading.Tasks.Internal;
+using UnityEssentials;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static class EnumeratorAsyncExtensions
     {

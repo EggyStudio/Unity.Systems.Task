@@ -6,7 +6,7 @@ using System.Threading;
 using Unity.Jobs;
 using UnityEngine;
 
-namespace UnityEssentials.Threading.Tasks
+namespace UnityEssentials
 {
     public static partial class UnityAsyncExtensions
     {
