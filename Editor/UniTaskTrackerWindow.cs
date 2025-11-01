@@ -17,7 +17,7 @@ namespace UnityEssentials
 
         static UniTaskTrackerWindow window;
 
-        [MenuItem("Window/UniTask Tracker")]
+        [MenuItem("Window/Task Tracker")]
         public static void OpenWindow()
         {
             if (window != null)
@@ -26,7 +26,7 @@ namespace UnityEssentials
             }
 
             // will called OnEnable(singleton instance will be set).
-            GetWindow<UniTaskTrackerWindow>("UniTask Tracker").Show();
+            GetWindow<UniTaskTrackerWindow>("Task Tracker").Show();
         }
 
         static readonly GUILayoutOption[] EmptyLayoutOption = new GUILayoutOption[0];
@@ -69,7 +69,7 @@ namespace UnityEssentials
         static readonly GUIContent EnableAutoReloadHeadContent = EditorGUIUtility.TrTextContent("Enable AutoReload", "Reload automatically.", (Texture)null);
         static readonly GUIContent ReloadHeadContent = EditorGUIUtility.TrTextContent("Reload", "Reload View.", (Texture)null);
         static readonly GUIContent GCHeadContent = EditorGUIUtility.TrTextContent("GC.Collect", "Invoke GC.Collect.", (Texture)null);
-        static readonly GUIContent EnableTrackingHeadContent = EditorGUIUtility.TrTextContent("Enable Tracking", "Start to track async/await UniTask. Performance impact: low", (Texture)null);
+        static readonly GUIContent EnableTrackingHeadContent = EditorGUIUtility.TrTextContent("Enable Tracking", "Start to track async/await Task. Performance impact: low", (Texture)null);
         static readonly GUIContent EnableStackTraceHeadContent = EditorGUIUtility.TrTextContent("Enable StackTrace", "Capture StackTrace when task is started. Performance impact: high", (Texture)null);
 
         // [Enable Tracking] | [Enable StackTrace]

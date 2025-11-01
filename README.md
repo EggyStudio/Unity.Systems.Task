@@ -28,7 +28,7 @@ Install the Unity Essentials entry package via Unity's Package Manager, then ins
 
 > Quick overview: Zero‑allocation async/await tailored for Unity. Await Unity operations, coroutines, and frame/timer primitives using a lightweight `Task`/`Task<T>` implementation that runs on the PlayerLoop. Includes cancellation, progress, combinators, async streams, channels, and an Editor Task Tracker window.
 
-This module is a Unity‑first re‑packaging of the popular UniTask concept under the `UnityEssentials.Threading.Tasks` namespace. It provides familiar `async/await` patterns without the allocations of `System.Threading.Tasks.Task` and integrates naturally with Unity’s main thread and frame timing.
+This module is a Unity‑first re‑packaging of the popular UniTask concept under the `UnityEssentials` namespace. It provides familiar `async/await` patterns without the allocations of `System.Threading.Tasks.Task` and integrates naturally with Unity’s main thread and frame timing.
 
 ## Features
 - Unity‑native task primitives
@@ -55,15 +55,10 @@ This module is a Unity‑first re‑packaging of the popular UniTask concept und
 - Optional: UnityWebRequest awaiters require corresponding compilation symbols or Unity versions where supported
 
 ## Usage
-1) Add the namespace
-```csharp
-using UnityEssentials.Threading.Tasks;
-```
-
-2) Await Unity operations and use frame utilities
+1) Await Unity operations and use frame utilities
 ```csharp
 using UnityEngine;
-using UnityEssentials.Threading.Tasks;
+using UnityEssentials;
 
 public class Example : MonoBehaviour
 {
@@ -87,7 +82,7 @@ public class Example : MonoBehaviour
 }
 ```
 
-3) Cancellation and progress
+2) Cancellation and progress
 ```csharp
 using System.Threading;
 
@@ -102,8 +97,8 @@ await request.ToUniTask(progress: new Progress<float>(p =>
 }), cancellationToken: cts.Token);
 ```
 
-4) Editor Task Tracker
-- Window → UniTask Tracker
+3) Editor Task Tracker
+- Window → Task Tracker
 - Enable Tracking and (optionally) StackTrace to diagnose leaked or long‑running tasks
 
 ## How It Works
