@@ -1,8 +1,8 @@
 {
-    "name": "UnityEssentials.Task.Editor",
+    "name": "UnityEssentials.Systems.Task.Editor",
     "rootNamespace": "",
     "references": [
-        "UnityEssentials.Task"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [
         "Editor"
