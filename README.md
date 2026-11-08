@@ -16,7 +16,7 @@ Install the Unity Essentials entry package via Unity's Package Manager, then ins
 - Add the entry package (via Git URL)
     - Window → Package Manager
     - "+" → "Add package from git URL…"
-    - Paste: `https://github.com/CanTalat-Yakan/UnityEssentials.git`
+    - Paste: `https://github.com/EggyStudio/UnityEssentials.git`
 
 - Install or update Unity Essentials packages
     - Tools → Install & Update UnityEssentials
@@ -28,7 +28,7 @@ Install the Unity Essentials entry package via Unity's Package Manager, then ins
 
 > Quick overview: Zero‑allocation async/await tailored for Unity. Await Unity operations, coroutines, and frame/timer primitives using a lightweight `Task`/`Task<T>` implementation that runs on the PlayerLoop. Includes cancellation, progress, combinators, async streams, channels, and an Editor Task Tracker window.
 
-This module is a Unity‑first re‑packaging of the popular UniTask concept under the `UnityEssentials` namespace. It provides familiar `async/await` patterns without the allocations of `System.Threading.Tasks.Task` and integrates naturally with Unity’s main thread and frame timing.
+This module is derived from [UniTask](https://github.com/Cysharp/UniTask) by Cysharp, which is distributed under the MIT License, with its types in the `UnityEssentials` namespace and `UniTask` renamed to `Task`. UniTask's copyright and permission notice is in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). It provides familiar `async/await` patterns without the allocations of `System.Threading.Tasks.Task` and integrates naturally with Unity’s main thread and frame timing.
 
 ## Features
 - Unity‑native task primitives
@@ -114,10 +114,12 @@ await request.ToUniTask(progress: new Progress<float>(p =>
 - Some awaiters (e.g., UnityWebRequest) depend on Unity version or compile flags
 
 ## Files in This Package
-- `Runtime/Task*.cs`, `Runtime/UnityAsyncExtensions*.cs` – Core task type, awaiters, frame/timer utilities
-- `Runtime/*` – Cancellation helpers, PlayerLoop integration, async enumerables, channels, pooling
-- `Editor/UniTaskTrackerWindow.cs` – Task Tracker window (Window → UniTask Tracker)
-- `Runtime/UnityEssentials.Task.asmdef`, `Editor/UnityEssentials.Task.Editor.asmdef` – Assembly definitions
+- `Runtime/Task*.cs`, `Runtime/UniTask.*.cs`, `Runtime/UnityAsyncExtensions*.cs`, the core task type, awaiters and frame and timer utilities
+- `Runtime/*`, cancellation helpers, PlayerLoop integration, async enumerables, channels and pooling
+- `Editor/UniTaskTrackerWindow.cs`, the Task Tracker window (Window → Task Tracker)
+- `Runtime/UnityEssentials.Systems.Task.asmdef`, `Editor/UnityEssentials.Systems.Task.Editor.asmdef`, the assembly definitions
+- `Runtime/Linq`, the LINQ operators for async enumerables, and `Runtime/External/Addressables`, `Runtime/External/DOTween` and `Runtime/External/TextMeshPro`, the integrations whose code compiles when the matching package is installed
+- `THIRD-PARTY-NOTICES.md`, UniTask's MIT License notice
 
 ## Tags
 unity, async, await, unitask, playerloop, coroutine, cancellation, progress, task, channels, reactive, tooling
